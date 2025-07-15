@@ -1,0 +1,67 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-rows: 1fr 2fr 2fr;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+.container {
+  display: grid;
+  grid-template-columns: 250px auto auto;
+  grid-template-areas:
+    "sidebar header header"
+    "sidebar contents announcements"
+    "sidebar contents trending";
+  grid-template-rows: auto auto auto;
+  height: 100vh;
+  gap: 2px;
+  padding: 20px;
+}
+.header {
+  grid-area: header;
+  background-color: aqua;
+  color: white;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.sidebar {
+  grid-area: sidebar;
+  background-color: #1e88e5;
+  padding: 1rem;
+  color: #ffffff;
+}
+.contents {
+  grid-area: contents;
+  background-color: #e3eaf3;
+  padding: 1rem;
+  grid-template-columns: repeat(2, auto); 
+  grid-template-rows: repeat(3, auto);
+}
+.announcements {
+  grid-area: announcements;
+  background-color: #e3eaf3;
+  color:black;
+  padding: 1rem;
+}
+.trending {
+  grid-area: trending;
+  background-color: #e3eaf3;
+  color:black;
+  padding: 1rem;
+}
+.box {
+  grid-area: box;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+}
+p {
+  padding: 4px;
+}
+.sidebar li {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
