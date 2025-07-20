@@ -3,65 +3,119 @@
   margin: 0px;
 }
 body {
-  grid-template-columns: 2fr 3fr 2fr;
-  grid-template-rows: 1fr 2fr 2fr;
   height: 100vh;
   font-family: Arial, sans-serif;
 }
 .container {
   display: grid;
-  grid-template-columns: 250px auto auto;
+  grid-template-columns: auto auto 2fr;
   grid-template-areas:
     "sidebar header header"
-    "sidebar contents announcements"
-    "sidebar contents trending";
-  grid-template-rows: auto auto auto;
+    "sidebar contents right"
+    "sidebar contents right";
   height: 100vh;
-  gap: 2px;
-  padding: 20px;
+  gap:10px;
 }
 .header {
   grid-area: header;
-  background-color: aqua;
+  background-color: rgb(243, 247, 247);
   color: white;
   padding: 1rem;
   font-size: 1.5rem;
+  border: #000000;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  display:flex;
+  flex-direction:column;
 }
 .sidebar {
   grid-area: sidebar;
-  background-color: #1e88e5;
+  background-color: #2C3E50;
   padding: 1rem;
   color: #ffffff;
 }
+.right-panel{
+  padding:6px;
+}
 .contents {
-  grid-area: contents;
-  background-color: #e3eaf3;
+  display: grid;
+  background-color: #E3EAF3;
   padding: 1rem;
-  grid-template-columns: repeat(2, auto); 
-  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 1fr 1fr; 
+  gap:10px;
+  height:100vh;
 }
 .announcements {
-  grid-area: announcements;
-  background-color: #e3eaf3;
+  grid-area: right;
+  background-color: 	#E74C3C;
   color:black;
   padding: 1rem;
+  margin-bottom: 10px;
 }
 .trending {
-  grid-area: trending;
-  background-color: #e3eaf3;
+  grid-area: right;
+  background-color: 	#C0392B;
   color:black;
   padding: 1rem;
 }
 .box {
-  grid-area: box;
-  background-color: white;
+  display: grid;
+  background-color: #FFFFFF;
   color: black;
   padding: 1rem;
-}
-p {
-  padding: 4px;
+  margin : 10px
 }
 .sidebar li {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  margin-top:20px;
   font-size: 16px;
+}
+svg {
+  width: 60px;
+  height: auto;
+  background-color:#C0392B;
+  margin-top:5px;
+}
+.search-bar{
+  display:flex;
+  justify-content:flex-start;
+}
+
+#searchbar{
+  width:450px;
+  height:40px;
+  border-radius: 6px;
+}
+.logo-button-rows{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo { 
+  margin-top: 30px;    
+  align-items: center;        
+}
+
+.logo svg {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.logo p {
+  margin-top: 3px;
+  font-size: 16px;
+  color: #000;
+}
+.one{
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
+.announcements ul li{
+  margin-top:10px;
 }
